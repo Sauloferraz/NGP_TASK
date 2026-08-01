@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3ccd678fb18154d99f404f97a74f97, type: 3}
   m_Name: Anvil
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Pickaxe
-  sprite: {fileID: 21300000, guid: 97cc92655eb40474198caf8e4ee57a86, type: 3}
-  stackable: 0
+  id: 0
+  itemName: Anvil
+  sprite: {fileID: 21300000, guid: 111dd800efc763f458c4b1863747e69b, type: 3}
+  stackable: 1
+  maxStacks: 5
