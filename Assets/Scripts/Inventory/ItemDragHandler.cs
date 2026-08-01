@@ -5,21 +5,21 @@ namespace Inventory
 {
     public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        private Transform originalParent;
-        private CanvasGroup canvasGroup;
+        private Transform _originalParent;
+        private CanvasGroup _canvasGroup;
 
         private void Start()
         {
-            canvasGroup = GetComponent<CanvasGroup>();
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
 
         public void OnBeginDrag(PointerEventData eventData)
         {
             // Start moving the item
-            originalParent = transform.parent;
+            _originalParent = transform.parent;
             transform.SetParent(transform.root);
-            canvasGroup.blocksRaycasts = false;
-            canvasGroup.alpha = 0.6f;
+            _canvasGroup.blocksRaycasts = false;
+            _canvasGroup.alpha = 0.6f;
         }
     
         public void OnDrag(PointerEventData eventData)
@@ -27,45 +27,43 @@ namespace Inventory
             // Item follows the mouse position
             transform.position = eventData.position;
         }
-    
+        
+        // The code in here should probably be put into another function
         public void OnEndDrag(PointerEventData eventData)
         {
             // Releasing the item
-            canvasGroup.blocksRaycasts = true;
-            canvasGroup.alpha = 1f;
+            
+            _canvasGroup.blocksRaycasts = true;
+            _canvasGroup.alpha = 1f;
+            
+            // Checks if the pointer is hovering an InventorySlot
+            InventorySlot targetSlot = eventData.pointerEnter?.GetComponentInParent<InventorySlot>();
 
-            InventorySlot dropSlot = eventData.pointerEnter?.GetComponent<InventorySlot>();
+            if (!targetSlot && eventData.pointerEnter)
+                targetSlot = eventData.pointerEnter.GetComponentInParent<InventorySlot>();
+            
+            // Saves the slot the item originally came from
+            InventorySlot originalSlot = _originalParent.GetComponentInParent<InventorySlot>();
 
-            if (!dropSlot)
+            if (targetSlot)
             {
-                GameObject dropItem = eventData.pointerEnter;
-                if (dropItem)
+                if (targetSlot.currentItem)
                 {
-                    dropSlot = dropItem.GetComponentInParent<InventorySlot>();
-                }
-            }
-        
-            InventorySlot originalSlot = originalParent.GetComponent<InventorySlot>();
-
-            if (dropSlot)
-            {
-                if (dropSlot.currentItem)
-                {
-                    dropSlot.currentItem.transform.SetParent(originalSlot.transform);
-                    originalSlot.currentItem = dropSlot.currentItem;
-                    dropSlot.currentItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                    targetSlot.currentItem.transform.SetParent(originalSlot.transform);
+                    originalSlot.currentItem = targetSlot.currentItem;
+                    targetSlot.currentItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 }
                 else
                 {
                     originalSlot.currentItem = null;
                 }
             
-                transform.SetParent(dropSlot.transform);
-                dropSlot.currentItem = eventData.pointerDrag.GetComponent<InventoryItem>();
+                transform.SetParent(targetSlot.transform);
+                targetSlot.currentItem = eventData.pointerDrag.GetComponent<InventoryItem>();
             }
             else
             {
-                transform.SetParent(originalParent);
+                transform.SetParent(_originalParent);
             }
         
             GetComponent<RectTransform>().anchoredPosition = Vector2.zero;

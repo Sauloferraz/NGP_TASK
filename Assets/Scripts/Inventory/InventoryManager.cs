@@ -6,34 +6,50 @@ namespace Inventory
     public class InventoryManager : MonoBehaviour
     {
         public GameObject inventoryItemPrefab;
-        
         public InventorySlot[] inventorySlots;
-
+        
         [Button]
-        public void AddItem(ItemData item)
+        public bool AddItem(ItemData item)
         {
-            for (int i = 0; i < inventorySlots.Length; i++)
+            // Checks if any slot has the same item with count lower than max and if it's stackable.
+            
+            foreach (InventorySlot slot in inventorySlots)
             {
-                InventorySlot slot = inventorySlots[i];
-                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                InventoryItem itemInSlot = slot.currentItem;
                 
-                Debug.Log($"Slot: {slot}");
-                Debug.Log($"Item: {item}");
-                Debug.Log($"Sprite: {item.sprite}");
+                if (itemInSlot && 
+                    itemInSlot.Data == item 
+                    && itemInSlot.Data.stackable
+                    && itemInSlot.ItemCount < itemInSlot.Data.maxStacks)
+                {
+                    itemInSlot.Increment();
+                    itemInSlot.RefreshCount();
+                    return true;
+                }
+            }
+            
+            foreach (InventorySlot slot in inventorySlots)
+            {
+                InventoryItem itemInSlot = slot.currentItem;
                 
                 if (!itemInSlot)
                 {
-                    SpawnItem(item, slot);
-                    return;
+                    SetItem(slot, item);
+                    return true;
                 }
             }
+
+            return false;
         }
-        
-        public void SpawnItem(ItemData itemData, InventorySlot inventorySlot)
+
+        private void SetItem(InventorySlot inventorySlot, ItemData itemData)
         {
-            GameObject newItemGO = Instantiate(inventoryItemPrefab, inventorySlot.transform);
-            InventoryItem newItem = newItemGO.GetComponent<InventoryItem>();
+            GameObject newItemObj = Instantiate(inventoryItemPrefab, inventorySlot.transform);
+            InventoryItem newItem = newItemObj.GetComponent<InventoryItem>();
+            
             newItem.Init(itemData);
+            
+            inventorySlot.currentItem = newItem;
         }
     }
 }
