@@ -7,6 +7,12 @@ using UnityEngine.Serialization;
 
 namespace Inventory
 {
+    /// <summary>
+    /// Acts as the central arbiter for complex transactions between different inventory containers.
+    /// <para><b>Philosophy:</b> It implements the Mediator pattern. Since individual <see cref="InventoryContainer"/>s 
+    /// should not be tightly coupled or directly manipulate each other's data, this manager safely handles 
+    /// cross-container operations (like Swapping) and ensures atomic state changes.</para>
+    /// </summary>
     public class InventoryManager : MonoBehaviour
     {
         public static InventoryManager Instance { get; private set; }
@@ -26,19 +32,19 @@ namespace Inventory
 
             (sourceContainer.slots[sourceIndex], targetContainer.slots[targetIndex]) = (targetContainer.slots[targetIndex], sourceContainer.slots[sourceIndex]);
 
-            // Acima é o mesmo que isso:
+            // Above is the same as:
             // InventorySlotData temp = sourceContainer.slots[sourceIndex];
             // sourceContainer.slots[sourceIndex] = targetContainer.slots[targetIndex];
             // targetContainer.slots[targetIndex] = temp;
             
-            // Avisa os dois containers que eles mudaram. As UIs deles vão se atualizar sozinhas!
+            // Updates both containers
             sourceContainer.NotifyUpdated();
-            
             if (sourceContainer != targetContainer)
             {
                 targetContainer.NotifyUpdated();
             }
             
+            // Saves the changes
             GameEvents.RequestSave();
         } 
     }

@@ -4,14 +4,19 @@ using UnityEngine;
 
 namespace Inventory
 {
+    /// <summary>
+    /// Connects a specific <see cref="InventoryContainer"/> to an array of <see cref="InventorySlot"/> UI elements.
+    /// <para><b>Philosophy:</b> Implements the Observer pattern. It acts as a "Television" that tunes into a specific 
+    /// data "Channel" (the Container). It listens for state changes and redraws the UI dynamically, ensuring 
+    /// the UI never dictates the game state.</para>
+    /// </summary>
     public class InventoryUI : MonoBehaviour
     {
-        [Tooltip("Arraste os seus GameObjects de InventorySlot aqui pelo Inspector")]
         public InventorySlot[] uiSlots;
 
         public InventoryContainer autoBindContainer;
         
-        private InventoryContainer currentContainer;
+        private InventoryContainer _currentContainer;
 
         private void Start()
         {
@@ -23,32 +28,30 @@ namespace Inventory
 
         public void Bind(InventoryContainer container)
         {
-            if (currentContainer)
+            if (_currentContainer)
             {
-                currentContainer.OnInventoryUpdated -= RefreshUI;
+                _currentContainer.OnInventoryUpdated -= RefreshUI;
             }
             
-            currentContainer = container;
+            _currentContainer = container;
 
-            if (currentContainer)
-            {
-                currentContainer.OnInventoryUpdated += RefreshUI;
-                RefreshUI();
-            }
+            if (!_currentContainer) return;
+            _currentContainer.OnInventoryUpdated += RefreshUI;
+            RefreshUI();
         }
         
         private void RefreshUI()
         {
-            if (!currentContainer) return;
+            if (!_currentContainer) return;
 
-            List<InventorySlotData> dataSlots = currentContainer.slots;
+            List<InventorySlotData> dataSlots = _currentContainer.slots;
 
             for (int i = 0; i < uiSlots.Length; i++)
             {
                 if (i < dataSlots.Count)
                 {
                     uiSlots[i].gameObject.SetActive(true);
-                    uiSlots[i].UpdateVisuals(currentContainer, dataSlots[i], i);
+                    uiSlots[i].UpdateVisuals(_currentContainer, dataSlots[i], i);
                 }
                 else
                 {

@@ -7,6 +7,15 @@ using UnityEngine;
 
 namespace Inventory
 {
+    /// <summary>
+    /// Represents the local data state of an inventory for a specific entity (Player, Chest, Shelf, Bag...).
+    /// <para><b>Philosophy:</b> Follows the Rich Domain Model principle. It acts as the Single Source of Truth for its own data, managing additions and removals locally.
+    /// It is completely decoupled from the UI, using an Event-Driven approach (Observer pattern) to notify listeners when its state changes.</para>
+    ///
+    /// The capacity field is defined in the Inspector, and ideally, the actual slot objects should be generated dynamically based on that, instead of being dragged from the Hierarchy.
+    /// But since time is short and this is a prototype, I decided to keep things simple and fast.
+    /// The class has an event Action, called when the container is updated by Player Actions, working as a bridge to the View and Data saves.
+    /// </summary>
     public class InventoryContainer : MonoBehaviour
     {
         public string containerID;
@@ -22,7 +31,7 @@ namespace Inventory
             InitializeEmptyInventory();
         }
 
-        // This could be optimized further through script execution order and preferably no dependencies
+        // This could be optimized further through script execution order, and/or preferably no dependencies to InventoryManager
         private IEnumerator Start()
         {
             yield return new WaitUntil(() => InventoryManager.Instance);
@@ -33,6 +42,7 @@ namespace Inventory
             }
         }
 
+        // This could also be optimized further to not have any dependencies.
         private void OnDisable()
         {
             if (!InventoryManager.Instance) return;
@@ -44,6 +54,7 @@ namespace Inventory
             }
         }
 
+        // The inventory is created empty, but ideally it should be able to have pre-defined items, so a Chest could have its content already established by the GameDesigner in the Inspector
         private void InitializeEmptyInventory()
         {
             slots.Clear();
@@ -53,7 +64,7 @@ namespace Inventory
             }
         }
         
-        [Button]
+        [Button] // Adding an Item to the Container saves it to the corresponding Slot, which is necessary to the Slot-Persistant Save System.
         public bool AddItem(ItemData item)
         {
             InventorySlotData emptySlot = slots.Find(s => s.IsEmpty);
@@ -81,13 +92,13 @@ namespace Inventory
             GameEvents.RequestSave();
         }
         
-        // Função pública para avisar a UI de que algo mudou (usaremos no Drag and Drop)
+        // Used for the Drag'n'Drop
         public void NotifyUpdated()
         {
             OnInventoryUpdated?.Invoke();
         }
     
-        // Usado pelo sistema de save
+        // Used for SaveSystem AutoSave
         public void OverwriteFromSave(List<InventorySlotData> loadedSlots)
         {
             slots = loadedSlots;

@@ -4,6 +4,12 @@ using UnityEngine;
 
 namespace Items
 {
+    /// <summary>
+    /// A central registry that holds references to all <see cref="ItemData"/> instances in the project.
+    /// <para><b>Philosophy:</b> It acts as a bridge for the Save System, 
+    /// allowing lightweight integer IDs to be serialized into JSON, which are then mapped back to their 
+    /// heavy ScriptableObject references during the loading phase.</para>
+    /// </summary>
     [CreateAssetMenu(fileName = "ItemDatabase", menuName = "Inventory/Item Database")]
     public class ItemDatabase : ScriptableObject
     {

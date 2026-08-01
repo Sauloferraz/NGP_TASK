@@ -3,6 +3,12 @@ using UnityEngine.EventSystems;
 
 namespace Inventory
 {
+    /// <summary>
+    /// Catches mouse drag events and handles the visual illusion of moving items across the Canvas.
+    /// <para><b>Philosophy:</b> Acts as a 'Controller' in MVC. It translates user input into actionable commands 
+    /// and delegates the actual data mutation to the <see cref="InventoryManager"/>. This strictly separates 
+    /// UI gesture logic from the core business logic of the inventory.</para>
+    /// </summary>
     public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         private Transform _originalParent;
