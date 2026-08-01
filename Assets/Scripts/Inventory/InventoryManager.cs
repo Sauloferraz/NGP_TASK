@@ -3,76 +3,41 @@ using System.Collections.Generic;
 using Items;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
         public static InventoryManager Instance { get; private set; }
-
-        [SerializeField] private int capacity = 20;
-        public List<InventorySlotData> slots = new List<InventorySlotData>();
-
-        public event Action OnInventoryUpdated;
-
+        
+        public List<InventoryContainer> allActiveContainers = new List<InventoryContainer>();
+        
         private void Awake()
         {
-            if (Instance && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
-
-            InitInventory();
+            if (Instance && Instance != this) Destroy(gameObject);
+            else Instance = this;
         }
-
-        private void InitInventory()
-        {
-            slots.Clear();
-            
-            for (int i = 0; i < capacity; i++)
-            {
-                slots.Add(new InventorySlotData(null, 0));
-            }
-        }
-
-        [Button]
-        public bool AddItem(ItemData item, int amount = 1)
-        {
-            // Busca o primeiro slot vazio na lista
-            InventorySlotData emptySlot = slots.Find(s => s.IsEmpty);
         
-            if (emptySlot != null)
+        public void SwapItems(InventoryContainer sourceContainer, int sourceIndex, InventoryContainer targetContainer, int targetIndex)
+        {
+            if (sourceIndex < 0 || sourceIndex >= sourceContainer.slots.Count) return;
+            if (targetIndex < 0 || targetIndex >= targetContainer.slots.Count) return;
+
+            (sourceContainer.slots[sourceIndex], targetContainer.slots[targetIndex]) = (targetContainer.slots[targetIndex], sourceContainer.slots[sourceIndex]);
+
+            // Acima é o mesmo que isso:
+            // InventorySlotData temp = sourceContainer.slots[sourceIndex];
+            // sourceContainer.slots[sourceIndex] = targetContainer.slots[targetIndex];
+            // targetContainer.slots[targetIndex] = temp;
+            
+            // Avisa os dois containers que eles mudaram. As UIs deles vão se atualizar sozinhas!
+            sourceContainer.NotifyUpdated();
+            if (sourceContainer != targetContainer)
             {
-                emptySlot.itemData = item;
-            
-                OnInventoryUpdated?.Invoke(); // Avisa a UI
-                return true;
+                targetContainer.NotifyUpdated();
             }
-
-            // Se chegou aqui, não achou slot vazio (Inventário cheio)
-            return false;
-        }
-
-        public void SwapSlots(int indexA, int indexB)
-        {
-            if (indexA < 0 || indexA >= slots.Count || indexB < 0 || indexB >= slots.Count) return;
-
-            (slots[indexA], slots[indexB]) = (slots[indexB], slots[indexA]);
-            
-            // Above is the same as:
-            // InventorySlotData temp = slots[indexA];
-            // slots[indexA] = slots[indexB];
-            // slots[indexB] = temp;
-
-            OnInventoryUpdated?.Invoke(); // Avisa a UI
-        }
-
-        public void OverwriteFromSave(List<InventorySlotData> loadedSlots)
-        {
-            slots = loadedSlots;
-            OnInventoryUpdated?.Invoke();
-        }
+        } 
     }
 }
+    

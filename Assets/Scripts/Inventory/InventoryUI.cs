@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Inventory
 {
@@ -7,37 +9,50 @@ namespace Inventory
         [Tooltip("Arraste os seus GameObjects de InventorySlot aqui pelo Inspector")]
         public InventorySlot[] uiSlots;
 
+        public InventoryContainer autoBindContainer;
+        
+        private InventoryContainer currentContainer;
+
         private void Start()
         {
-            // 1. A UI liga a TV e se inscreve no "megafone" do Manager
-            InventoryManager.Instance.OnInventoryUpdated += RefreshUI;
-        
-            // 2. Atualiza a tela uma vez no início para sincronizar
-            RefreshUI();
-        }
-        
-        private void OnDestroy()
-        {
-            // Boa prática: se o painel do inventário for destruído, cancelamos a inscrição
-            if (InventoryManager.Instance != null)
+            if (autoBindContainer)
             {
-                InventoryManager.Instance.OnInventoryUpdated -= RefreshUI;
+                Bind(autoBindContainer);
             }
         }
 
+        public void Bind(InventoryContainer container)
+        {
+            if (currentContainer)
+            {
+                currentContainer.OnInventoryUpdated -= RefreshUI;
+            }
+            
+            currentContainer = container;
+
+            if (currentContainer)
+            {
+                currentContainer.OnInventoryUpdated += RefreshUI;
+                RefreshUI();
+            }
+        }
+        
         private void RefreshUI()
         {
-            // Pega a nossa "planilha" atualizada
-            var dataSlots = InventoryManager.Instance.slots;
+            if (!currentContainer) return;
 
-            // Passa por todos os slots da tela
+            List<InventorySlotData> dataSlots = currentContainer.slots;
+
             for (int i = 0; i < uiSlots.Length; i++)
             {
-                // Garantia de segurança caso você tenha mais slots na UI do que na 'capacity'
-                if (i < dataSlots.Count) 
+                if (i < dataSlots.Count)
                 {
-                    // No Passo 4 nós vamos criar essa função no seu InventorySlot!
-                    uiSlots[i].UpdateVisuals(dataSlots[i], i);
+                    uiSlots[i].gameObject.SetActive(true);
+                    uiSlots[i].UpdateVisuals(currentContainer, dataSlots[i], i);
+                }
+                else
+                {
+                    uiSlots[i].gameObject.SetActive(false);
                 }
             }
         }

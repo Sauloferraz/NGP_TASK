@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Inventory;
 using Items;
@@ -12,71 +13,124 @@ namespace Saving
     public class SaveSystem : MonoBehaviour
     {
         public ItemDatabase database;
-
+        
         private string _savePath;
 
         private void Awake()
         {
-            _savePath = Application.persistentDataPath + "/inventory.json";
+            _savePath = Application.persistentDataPath + "/global_inventory.json";
         }
 
-        [Button("Save Inventory", ButtonSizes.Large)]
+        [Button("Save All Inventories", ButtonSizes.Large)]
         public void Save()
         {
-            List<InventorySlotData> activeSlots = InventoryManager.Instance.slots;
-            InventorySaveData saveData = new InventorySaveData();
+            // Clears any 'null' or destroyed containers (fixes Unity Editor static list bug)
+            InventoryManager.Instance.allActiveContainers.RemoveAll(c => !c);
+        
+            Debug.Log($"<color=cyan>[SAVE]</color> Started saving. Found {InventoryManager.Instance.allActiveContainers.Count} active containers in the scene.");
 
-            foreach (var slot in activeSlots)
+            GlobalSaveData globalSave = new GlobalSaveData();
+
+            foreach (InventoryContainer container in InventoryManager.Instance.allActiveContainers)
             {
-                SlotSaveData slotData = new SlotSaveData();
+                if (string.IsNullOrEmpty(container.containerID))
+                {
+                    Debug.LogWarning($"<color=yellow>[SAVE WARNING]</color> Ignored a container on '{container.gameObject.name}', its ContainerID is empty!");
+                    continue;
+                }
 
-                if (slot.IsEmpty)
+                ContainerSaveData containerSave = new ContainerSaveData
                 {
-                    slotData.itemID = -1;
-                }
-                else
-                {
-                    slotData.itemID = slot.itemData.id;
-                }
+                    containerID = container.containerID
+                };
+
+                int itemsSavedCount = 0;
                 
-                saveData.savedSlots.Add(slotData);
+                foreach (InventorySlotData slot in container.slots)
+                {
+                    SlotSaveData slotData = new SlotSaveData();
+                    if (slot.IsEmpty)
+                    {
+                        slotData.itemID = -1;
+                    }
+                    else
+                    {
+                        slotData.itemID = slot.itemData.id;
+                        itemsSavedCount++;
+                    }
+                    containerSave.savedSlots.Add(slotData);
+                }
+
+                globalSave.containers.Add(containerSave);
+                Debug.Log($"<color=cyan>[SAVE]</color> Saved container '{container.containerID}' with {itemsSavedCount} items.");
             }
-            
-            string json = JsonUtility.ToJson(saveData, true);
+
+            string json = JsonUtility.ToJson(globalSave, true);
             File.WriteAllText(_savePath, json);
-            
-            Debug.Log($"Inventory saved to {_savePath}");
+            Debug.Log($"<color=green>[SAVE SUCCESS]</color> File written to: {_savePath}");
         }
 
-        [Button("Load Inventory", ButtonSizes.Large)]
+        [Button("Load All Inventories", ButtonSizes.Large)]
         public void Load()
         {
+            // Clear any null containers
+            InventoryManager.Instance.allActiveContainers.RemoveAll(c => !c);
+
             if (!File.Exists(_savePath))
             {
-                Debug.LogWarning("No save file found!");
+                Debug.LogError("<color=red>[LOAD ERROR]</color> No save file found at " + _savePath);
                 return;
             }
 
             string json = File.ReadAllText(_savePath);
-            InventorySaveData saveData = JsonUtility.FromJson<InventorySaveData>(json);
+            GlobalSaveData globalSave = JsonUtility.FromJson<GlobalSaveData>(json);
 
-            List<InventorySlotData> reconstructedSlots = new List<InventorySlotData>();
-
-            foreach (var savedSlot in saveData.savedSlots)
+            if (globalSave?.containers == null)
             {
-                InventorySlotData newSlot = new InventorySlotData();
-
-                if (savedSlot.itemID != -1)
-                {
-                    newSlot.itemData = database.GetItemByID(savedSlot.itemID);
-                }
-                
-                reconstructedSlots.Add(newSlot);
+                Debug.LogError("<color=red>[LOAD ERROR]</color> Failed to parse JSON. The file might be corrupted.");
+                return;
             }
-            
-            InventoryManager.Instance.OverwriteFromSave(reconstructedSlots);
-            
-            Debug.Log("Inventory loaded successfully");
+
+            Debug.Log($"<color=orange>[LOAD]</color> JSON read successfully. Found {globalSave.containers.Count} containers in the save file.");
+
+            foreach (InventoryContainer activeContainer in InventoryManager.Instance.allActiveContainers)
+            {
+                ContainerSaveData matchingData = globalSave.containers.Find(x => x.containerID == activeContainer.containerID);
+
+                if (matchingData != null)
+                {
+                    var reconstructedSlots = new List<InventorySlotData>();
+                    int itemsLoadedCount = 0;
+
+                    foreach (SlotSaveData savedSlot in matchingData.savedSlots)
+                    {
+                        InventorySlotData newSlot = new InventorySlotData();
+                        if (savedSlot.itemID != -1)
+                        {
+                            ItemData foundItem = database.GetItemByID(savedSlot.itemID);
+                            if (!foundItem) 
+                            {
+                                Debug.LogWarning($"<color=yellow>[LOAD WARNING]</color> Container '{activeContainer.containerID}' tried to load Item ID {savedSlot.itemID}, but it's missing in the Database!");
+                            }
+                            else
+                            {
+                                newSlot.itemData = foundItem;
+                                itemsLoadedCount++;
+                            }
+                        }
+                        reconstructedSlots.Add(newSlot);
+                    }
+
+                    activeContainer.OverwriteFromSave(reconstructedSlots);
+                    Debug.Log($"<color=orange>[LOAD]</color> Successfully applied {itemsLoadedCount} items to '{activeContainer.containerID}'.");
+                }
+                else
+                {
+                    Debug.LogWarning($"<color=yellow>[LOAD WARNING]</color> Container '{activeContainer.containerID}' is in the scene but has NO DATA in the save file.");
+                }
+            }
+        
+            Debug.Log("<color=green>[LOAD SUCCESS]</color> Process finished.");
         }
     }
 }
