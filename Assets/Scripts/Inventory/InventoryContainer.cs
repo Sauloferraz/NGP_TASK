@@ -63,10 +63,22 @@ namespace Inventory
                 emptySlot.itemData = item;
             
                 NotifyUpdated();
+                GameEvents.RequestSave();
                 return true;
             }
 
             return false;
+        }
+
+        [Button]
+        public void RemoveItemAt(int index)
+        {
+            if(index < 0 || index >= slots.Count) return;
+            
+            slots[index].Clear();
+            
+            NotifyUpdated();
+            GameEvents.RequestSave();
         }
         
         // Função pública para avisar a UI de que algo mudou (usaremos no Drag and Drop)

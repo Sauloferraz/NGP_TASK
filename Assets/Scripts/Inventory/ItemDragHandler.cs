@@ -44,18 +44,24 @@ namespace Inventory
             
            transform.SetParent(_originalParent);
            transform.position = _originalPosition;
-           
-           if (eventData.pointerEnter)
-           {
-               InventorySlot targetSlot = eventData.pointerEnter.GetComponentInParent<InventorySlot>();
 
-               if (targetSlot && _sourceSlot)
-               {
-                   InventoryManager.Instance.SwapItems(_sourceSlot.ParentContainer, _sourceSlot.slotIndex,
-                       targetSlot.ParentContainer, targetSlot.slotIndex);
-               }
-           }
+           if (!eventData.pointerEnter) return;
            
+           InventorySlot targetSlot = eventData.pointerEnter.GetComponentInParent<InventorySlot>();
+           
+           if (targetSlot && _sourceSlot)
+           {
+               InventoryManager.Instance.SwapItems(_sourceSlot.ParentContainer, _sourceSlot.slotIndex,
+                   targetSlot.ParentContainer, targetSlot.slotIndex);
+               return;
+           }
+               
+           TrashZone trash = eventData.pointerEnter.GetComponentInParent<TrashZone>();
+           
+           if (trash && _sourceSlot)
+           {
+               _sourceSlot.ParentContainer.RemoveItemAt(_sourceSlot.slotIndex);
+           }
         }
     }
 }

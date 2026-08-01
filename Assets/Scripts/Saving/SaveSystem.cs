@@ -21,6 +21,16 @@ namespace Saving
             _savePath = Application.persistentDataPath + "/global_inventory.json";
         }
 
+        private void OnEnable()
+        {
+            GameEvents.OnSaveRequested += Save;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnSaveRequested -= Save;
+        }
+
         [Button("Save All Inventories", ButtonSizes.Large)]
         public void Save()
         {

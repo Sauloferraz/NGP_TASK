@@ -33,10 +33,13 @@ namespace Inventory
             
             // Avisa os dois containers que eles mudaram. As UIs deles vão se atualizar sozinhas!
             sourceContainer.NotifyUpdated();
+            
             if (sourceContainer != targetContainer)
             {
                 targetContainer.NotifyUpdated();
             }
+            
+            GameEvents.RequestSave();
         } 
     }
 }
