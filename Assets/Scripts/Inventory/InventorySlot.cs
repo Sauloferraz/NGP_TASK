@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class InventorySlot : MonoBehaviour
+namespace Inventory
 {
-    public GameObject currentItem;
+    public class InventorySlot : MonoBehaviour
+    {
+        public InventoryItem currentItem;
+    }
 }

@@ -1,8 +1,12 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class ItemData : ScriptableObject
+namespace Inventory
 {
-    public Sprite image;
-    public bool stackable = true;
+    [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
+    public class ItemData : ScriptableObject
+    {
+        public string itemName;
+        public Sprite sprite;
+        public bool stackable = true;
+    }
 }

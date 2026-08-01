@@ -6,13 +6,18 @@ namespace Inventory
     [RequireComponent(typeof(ItemDragHandler))]
     public class InventoryItem : MonoBehaviour
     {
-        [HideInInspector] public ItemData Data { get; }
-        
-        public Image image { get; }
-        
+        public ItemData data;
+        public Image image;
+
+        private void Awake()
+        {
+            image = GetComponent<Image>();
+        }
+
         public void Init(ItemData newItemData)
         {
-            image.sprite = newItemData.image;
+            data = newItemData;
+            image.sprite = newItemData.sprite;
         }
     }
 }
