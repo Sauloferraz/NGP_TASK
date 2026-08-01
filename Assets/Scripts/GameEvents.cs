@@ -1,7 +1,9 @@
 ﻿using System;
 using Inventory;
+using Items;
 
-public class GameEvents
+// Event Bus
+public static class GameEvents
 {
     public static event Action OnTogglePlayerInventory;
     public static event Action<InventoryContainer> OnExternalContainerOpen;
@@ -14,4 +16,10 @@ public class GameEvents
         OnExternalContainerOpen?.Invoke(container);
     
     public static void RequestSave() => OnSaveRequested?.Invoke();
+
+    public static event Action<ItemData> OnShowTooltipRequested;
+    public static event Action OnHideTooltipRequested;
+
+    public static void RequestShowTooltip(ItemData item) => OnShowTooltipRequested?.Invoke(item);
+    public static void RequestHideTooltip() => OnHideTooltipRequested?.Invoke();
 }

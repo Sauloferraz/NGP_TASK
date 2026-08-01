@@ -12,6 +12,7 @@ namespace Items
         
         public string itemName;
         public Sprite sprite;
+        [TextArea(3,5)] public string description;
         
         public bool stackable = false; // redundant
         [EnableIf("stackable")] public int maxStacks = 1;

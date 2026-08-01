@@ -51,8 +51,8 @@ namespace Inventory
            
            if (targetSlot && _sourceSlot)
            {
-               InventoryManager.Instance.SwapItems(_sourceSlot.ParentContainer, _sourceSlot.slotIndex,
-                   targetSlot.ParentContainer, targetSlot.slotIndex);
+               InventoryManager.Instance.SwapItems(_sourceSlot.ParentContainer, _sourceSlot.SlotIndex,
+                   targetSlot.ParentContainer, targetSlot.SlotIndex);
                return;
            }
                
@@ -60,7 +60,7 @@ namespace Inventory
            
            if (trash && _sourceSlot)
            {
-               _sourceSlot.ParentContainer.RemoveItemAt(_sourceSlot.slotIndex);
+               _sourceSlot.ParentContainer.RemoveItemAt(_sourceSlot.SlotIndex);
            }
         }
     }
