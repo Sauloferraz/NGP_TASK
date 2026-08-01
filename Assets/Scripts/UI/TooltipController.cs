@@ -53,7 +53,6 @@ namespace UI
             _canvasGroup.alpha = 1f;
         }
         
-        
         private void HideTooltip()
         {
             _canvasGroup.alpha = 0f;
