@@ -2,13 +2,13 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Inventory
+namespace Items
 {
     [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
     public class ItemData : ScriptableObject
     {
         [FormerlySerializedAs("ID")]
-        public int id;
+        public int id = -1;
         
         public string itemName;
         public Sprite sprite;

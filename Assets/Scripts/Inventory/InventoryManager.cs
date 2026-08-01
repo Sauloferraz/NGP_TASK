@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Items;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ namespace Inventory
 
         private void Awake()
         {
-            if (Instance != null && Instance != this)
+            if (Instance && Instance != this)
             {
                 Destroy(gameObject);
                 return;
@@ -45,7 +46,6 @@ namespace Inventory
             if (emptySlot != null)
             {
                 emptySlot.itemData = item;
-                emptySlot.count = 1; // Adiciona apenas 1, sem stacking
             
                 OnInventoryUpdated?.Invoke(); // Avisa a UI
                 return true;
@@ -67,6 +67,12 @@ namespace Inventory
             // slots[indexB] = temp;
 
             OnInventoryUpdated?.Invoke(); // Avisa a UI
+        }
+
+        public void OverwriteFromSave(List<InventorySlotData> loadedSlots)
+        {
+            slots = loadedSlots;
+            OnInventoryUpdated?.Invoke();
         }
     }
 }

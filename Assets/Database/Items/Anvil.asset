@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 0
   itemName: Anvil
   sprite: {fileID: 21300000, guid: 111dd800efc763f458c4b1863747e69b, type: 3}
-  stackable: 1
+  stackable: 0
   maxStacks: 5
