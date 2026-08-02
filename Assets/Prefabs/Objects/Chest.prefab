@@ -172,7 +172,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.016360283, y: -0.39264727}
+  m_Offset: {x: 0.016360283, y: -0.54591316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.1125007, y: 1.3490198}
+  m_Size: {x: 2.1125007, y: 1.6555516}
   m_EdgeRadius: 0
 --- !u!1 &7273333248622421998
 GameObject:
@@ -369,22 +369,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bacef61a1347b08c961ea99c7be89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory.InventoryContainer
-  containerID: Chest
+  containerID: Chest (1)
   slots:
-  - itemData: {fileID: 11400000, guid: abef7554a1c237b4ca66d8298aaefd96, type: 2}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 11400000, guid: cefbe6261bd9ef644abd8c086809b5f1, type: 2}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 11400000, guid: 930199b309bfaee4297de299c3d35983, type: 2}
-  - itemData: {fileID: 11400000, guid: da34c7c99ad37d548b3a39eb1958f413, type: 2}
-  - itemData: {fileID: 11400000, guid: 436f769b9e1ef36449568d83a27c324e, type: 2}
-  - itemData: {fileID: 0}
   - itemData: {fileID: 11400000, guid: b6c07dae1c00f65409ebd1bace6ddd4c, type: 2}
-  - itemData: {fileID: 11400000, guid: b6c07dae1c00f65409ebd1bace6ddd4c, type: 2}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 11400000, guid: 68b179977834ba344b5c1f6d57905955, type: 2}
-  - itemData: {fileID: 11400000, guid: 68b179977834ba344b5c1f6d57905955, type: 2}
+  - itemData: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
+  - itemData: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
   - itemData: {fileID: 11400000, guid: b4342f9d590171840b8e4ba44efb5214, type: 2}
+  - itemData: {fileID: 11400000, guid: 930199b309bfaee4297de299c3d35983, type: 2}
+  - itemData: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
+  - itemData: {fileID: 11400000, guid: 436f769b9e1ef36449568d83a27c324e, type: 2}
+  - itemData: {fileID: 11400000, guid: 436f769b9e1ef36449568d83a27c324e, type: 2}
+  - itemData: {fileID: 11400000, guid: b6c07dae1c00f65409ebd1bace6ddd4c, type: 2}
+  - itemData: {fileID: 11400000, guid: 0ebb26063ac4e1543b8c93290133a950, type: 2}
+  - itemData: {fileID: 11400000, guid: 930199b309bfaee4297de299c3d35983, type: 2}
+  - itemData: {fileID: 11400000, guid: 0ebb26063ac4e1543b8c93290133a950, type: 2}
+  - itemData: {fileID: 11400000, guid: cefbe6261bd9ef644abd8c086809b5f1, type: 2}
+  - itemData: {fileID: 11400000, guid: 68b179977834ba344b5c1f6d57905955, type: 2}
 --- !u!114 &8909024462438296909
 MonoBehaviour:
   m_ObjectHideFlags: 0

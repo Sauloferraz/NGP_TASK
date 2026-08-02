@@ -4080,6 +4080,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 184337051}
     m_Modifications:
+    - target: {fileID: 5238776699423654467, guid: 807c339013f4dc44e895c245de176914, type: 3}
+      propertyPath: m_Size.y
+      value: 4.3322215
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238776699423654467, guid: 807c339013f4dc44e895c245de176914, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.29740167
+      objectReference: {fileID: 0}
     - target: {fileID: 6785938001933425603, guid: 807c339013f4dc44e895c245de176914, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.9112434
@@ -6462,54 +6470,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: containerID
-      value: Chest (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[0].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: b6c07dae1c00f65409ebd1bace6ddd4c, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[1].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[2].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[3].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: b4342f9d590171840b8e4ba44efb5214, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[5].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1b2a54cf257366e48bd887a4b1ddaa1a, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[7].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 436f769b9e1ef36449568d83a27c324e, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[9].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0ebb26063ac4e1543b8c93290133a950, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[10].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 930199b309bfaee4297de299c3d35983, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[11].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0ebb26063ac4e1543b8c93290133a950, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[12].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: cefbe6261bd9ef644abd8c086809b5f1, type: 2}
-    - target: {fileID: 4757186098361115430, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
-      propertyPath: slots.Array.data[13].itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 68b179977834ba344b5c1f6d57905955, type: 2}
     - target: {fileID: 9105497709913822713, guid: ec4e3d378819fde44b4267b9fcf12e91, type: 3}
       propertyPath: m_Name
       value: Chest (1)
