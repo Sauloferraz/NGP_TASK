@@ -25,11 +25,6 @@ namespace Inventory
         public List<InventorySlotData> slots = new List<InventorySlotData>();
         
         public event Action OnInventoryUpdated;
-        
-        private void Awake()
-        {
-            //InitializeEmptyInventory();
-        }
 
         // This could be optimized further through script execution order, and/or preferably no dependencies to InventoryManager
         private IEnumerator Start()
@@ -53,15 +48,6 @@ namespace Inventory
             if (InventoryManager.Instance.allActiveContainers.Contains(this))
             {
                 InventoryManager.Instance.allActiveContainers.Remove(this);
-            }
-        }
-
-        // The inventory is created empty, but ideally it should be able to have pre-defined items, so a Chest could have its content already established by the GameDesigner in the Inspector
-        private void InitializeEmptyInventory()
-        {
-            for (int i = 0; i < capacity; i++)
-            {
-                slots.Add(new InventorySlotData());
             }
         }
         

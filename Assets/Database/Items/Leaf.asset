@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 6
   itemName: Leaf
   sprite: {fileID: 254538803, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  description: Nothing special
   stackable: 0
   maxStacks: 1

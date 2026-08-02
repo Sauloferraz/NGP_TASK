@@ -48,15 +48,10 @@ namespace Inventory
 
             for (int i = 0; i < uiSlots.Length; i++)
             {
-                if (i < dataSlots.Count)
-                {
-                    uiSlots[i].gameObject.SetActive(true);
-                    uiSlots[i].UpdateVisuals(_currentContainer, dataSlots[i], i);
-                }
-                else
-                {
-                    //uiSlots[i].gameObject.SetActive(false);
-                }
+                if (i >= dataSlots.Count) continue;
+                
+                uiSlots[i].gameObject.SetActive(true);
+                uiSlots[i].UpdateVisuals(_currentContainer, dataSlots[i], i);
             }
         }
     }

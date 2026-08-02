@@ -380,13 +380,13 @@ TextureImporter:
       name: Cover
       rect:
         serializedVersion: 2
-        x: 63
-        y: 687
-        width: 226
-        height: 162
+        x: 64
+        y: 688
+        width: 224
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 13, y: 13, z: 13, w: 13}
+      border: {x: 12, y: 12, z: 12, w: 12}
       customData: 
       outline: []
       physicsShape: []
@@ -402,13 +402,13 @@ TextureImporter:
       name: LeftPage
       rect:
         serializedVersion: 2
-        x: 303
-        y: 700
-        width: 106
-        height: 149
+        x: 304
+        y: 701
+        width: 104
+        height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 7, y: 8, z: 6, w: 7}
+      border: {x: 6, y: 7, z: 5, w: 7}
       customData: 
       outline: []
       physicsShape: []
@@ -424,13 +424,13 @@ TextureImporter:
       name: RightPage
       rect:
         serializedVersion: 2
-        x: 431
-        y: 700
-        width: 106
-        height: 149
+        x: 432
+        y: 701
+        width: 104
+        height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 7, y: 8, z: 7, w: 7}
+      border: {x: 6, y: 7, z: 6, w: 6}
       customData: 
       outline: []
       physicsShape: []
@@ -468,13 +468,13 @@ TextureImporter:
       name: Banner
       rect:
         serializedVersion: 2
-        x: 63
-        y: 639
-        width: 226
-        height: 34
+        x: 64
+        y: 640
+        width: 224
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 13, y: 4, z: 13, w: 13}
+      border: {x: 13, y: 4, z: 12, w: 12}
       customData: 
       outline: []
       physicsShape: []
@@ -534,10 +534,10 @@ TextureImporter:
       name: SlotFrame
       rect:
         serializedVersion: 2
-        x: 64
-        y: 560
-        width: 32
-        height: 32
+        x: 65
+        y: 561
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -578,10 +578,10 @@ TextureImporter:
       name: SelectedSlot
       rect:
         serializedVersion: 2
-        x: 64
-        y: 528
-        width: 32
-        height: 32
+        x: 65
+        y: 529
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,13 +754,13 @@ TextureImporter:
       name: Header
       rect:
         serializedVersion: 2
-        x: 64
-        y: 448
-        width: 64
-        height: 16
+        x: 65
+        y: 449
+        width: 62
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 4, z: 3, w: 3}
+      border: {x: 3, y: 3, z: 2, w: 2}
       customData: 
       outline: []
       physicsShape: []
@@ -864,13 +864,13 @@ TextureImporter:
       name: TextField
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
-        width: 64
-        height: 32
+        x: 65
+        y: 385
+        width: 62
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 6, z: 6, w: 3}
+      border: {x: 2, y: 5, z: 5, w: 3}
       customData: 
       outline: []
       physicsShape: []
@@ -930,10 +930,10 @@ TextureImporter:
       name: Mouse
       rect:
         serializedVersion: 2
-        x: 72
-        y: 327
-        width: 16
-        height: 18
+        x: 73
+        y: 328
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -952,10 +952,10 @@ TextureImporter:
       name: MouseClick
       rect:
         serializedVersion: 2
-        x: 104
-        y: 327
-        width: 16
-        height: 18
+        x: 105
+        y: 328
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2255,7 +2255,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2277,7 +2277,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

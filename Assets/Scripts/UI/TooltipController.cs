@@ -45,7 +45,7 @@ namespace UI
         private void ShowTooltip(ItemData itemData)
         {
             nameText.text = itemData.itemName;
-            //descriptionText.text = itemData.description;
+            descriptionText.text = itemData.description;
 
             // Force position update instantly before showing to prevent a 1-frame visual jump
             FollowMouse(); 

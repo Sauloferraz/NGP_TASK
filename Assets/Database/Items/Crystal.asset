@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Crystal
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2
-  itemName: Wing
-  sprite: {fileID: -995310176, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  itemName: Crystal
+  sprite: {fileID: 1902273773, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
+  description: Shiny!
   stackable: 0
   maxStacks: 1

@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 1
   itemName: Blood
   sprite: {fileID: -2020878819, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  description: Don't ask.
   stackable: 0
   maxStacks: 1

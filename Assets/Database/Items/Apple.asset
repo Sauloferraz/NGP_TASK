@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 0
   itemName: Apple
   sprite: {fileID: -361955542, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  description: Crunchy...
   stackable: 0
   maxStacks: 1

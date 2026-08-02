@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 3
   itemName: Dust
   sprite: {fileID: 299187050, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  description: Dust in the wind...
   stackable: 0
   maxStacks: 5

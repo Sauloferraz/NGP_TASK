@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,8 +16,11 @@ namespace Inventory
         private Vector3 _originalPosition;
         private CanvasGroup _canvasGroup;
         private InventorySlot _sourceSlot;
-
-        private void Start()
+        
+        private void OnEnable() => GameEvents.OnCloseMenusRequested += ResetDrag;
+        private void OnDisable() => GameEvents.OnCloseMenusRequested -= ResetDrag;
+        
+        private void Awake()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
             if(!_canvasGroup) _canvasGroup = gameObject.AddComponent<CanvasGroup>();
@@ -44,13 +48,8 @@ namespace Inventory
         
         public void OnEndDrag(PointerEventData eventData)
         {
-            // Releasing the item
-            _canvasGroup.blocksRaycasts = true;
-            _canvasGroup.alpha = 1f;
+            ResetDrag();
             
-           transform.SetParent(_originalParent);
-           transform.position = _originalPosition;
-
            if (!eventData.pointerEnter) return;
            
            InventorySlot targetSlot = eventData.pointerEnter.GetComponentInParent<InventorySlot>();
@@ -68,6 +67,18 @@ namespace Inventory
            {
                _sourceSlot.ParentContainer.RemoveItemAt(_sourceSlot.SlotIndex);
            }
+        }
+
+        private void ResetDrag()
+        {
+            if (!_originalParent) return;
+            
+            transform.SetParent(_originalParent);
+            transform.position = _originalPosition;
+            _canvasGroup.blocksRaycasts = true;
+            _canvasGroup.alpha = 1f;
+
+            _originalParent = null;
         }
     }
 }

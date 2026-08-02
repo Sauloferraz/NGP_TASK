@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 4
   itemName: Ectoplasm
   sprite: {fileID: -903790717, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
-  description: 
+  description: Oh, ghost blood!
   stackable: 0
   maxStacks: 1
