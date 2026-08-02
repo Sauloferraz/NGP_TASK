@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da27f208a03bf82439e5a07eab0c3e0e
+guid: acd2fce5442425748b5b8bdbd6ed8412
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8302471051733031134
-    second: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_0
+      213: 5321050430278352139
+    second: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_0
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,42 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed8d284ee6d483370800000000000000
-      internalID: 8302471051733031134
+      spriteID: b0d3ea89c2b28d940800000000000000
+      internalID: 5321050430278352139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cec1c3b6adb7e0f40aeee80310a78998
-      internalID: -1398656777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_2
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,42 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21ce83936049d1a47898e0d8002db4c2
-      internalID: -670734913
+      spriteID: f3cf178bb50cc8a40a99ab616eca9cb8
+      internalID: 1058331310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42f218a0557caaf429143485917cbb89
-      internalID: 1806791050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_4
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7685fe51b606d33408b7b40d44bbfb1e
-      internalID: -554898028
+      spriteID: 1cc7a7c36f329e24bb534af0ea62d4b7
+      internalID: 2096390106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_5
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_3
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,8 +181,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0fbab8fd9f94114fb6bc2a99706be09
-      internalID: 190791109
+      spriteID: 2ad8835c1bb1aa340b6a532070a5cc3d
+      internalID: -614053964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f861747ac41d2284aa1c724396eca6c7
+      internalID: -69400900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20c125d9055dc1468b4f9cf5899f54f
+      internalID: -1575047413
       vertices: []
       indices: 
       edges: []
@@ -235,7 +235,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1af891af2ae98ca4496376a916bc03bd
+    spriteID: 476f542e70d854843897c20a449bcc30
     internalID: 0
     vertices: []
     indices: 
@@ -244,17 +244,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: True
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_0: 8302471051733031134
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_1: -1398656777
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_2: -670734913
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_3: 1806791050
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_4: -554898028
-      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 1_5: 190791109
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_0: 5321050430278352139
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_1: 1058331310
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_2: 2096390106
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_3: -614053964
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_4: -69400900
+      ROLEWORLD_WIZARD_ANIMATED INTERIOR_CHEST 2_5: -1575047413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

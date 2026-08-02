@@ -22,7 +22,7 @@ namespace DefaultNamespace
         {
             if (actions.Player.Interact.WasPressedThisFrame())
             {
-                GameEvents.RequestTogglePlayerInventory();
+                
             }
         }
 

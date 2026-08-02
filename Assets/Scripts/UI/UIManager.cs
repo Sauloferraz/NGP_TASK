@@ -7,57 +7,47 @@ namespace UI
 {
     public class UIManager : MonoBehaviour
     {
-        public CanvasGroup playerGroup;
         public CanvasGroup externalGroup;
         
-        //TODO: Verificar uma forma melhor de fazer essa referência
-        public InventoryUI externalInventory;
-
-        private bool _isInventoryOpen = false;
+        public InventoryUI externalUI;
         
         private void Awake()
         {
-            SetPanelActive(playerGroup, false);
             SetPanelActive(externalGroup, false);
         }
 
         private void OnEnable()
         {
-            GameEvents.OnTogglePlayerInventory += TogglePlayerInventory;
             GameEvents.OnExternalContainerOpen += OpenExternalInventory;
+            
+            GameEvents.OnCloseMenusRequested += ForceCloseAll;
         }
         
         private void OnDisable()
         {
-            GameEvents.OnTogglePlayerInventory -= TogglePlayerInventory;
             GameEvents.OnExternalContainerOpen -= OpenExternalInventory;
+            
+            GameEvents.OnCloseMenusRequested -= ForceCloseAll;
         }
 
         private void SetPanelActive(CanvasGroup group, bool isActive)
         {
             group.alpha = isActive ? 1 : 0;
-            group.interactable = isActive ? true : false;
-            group.blocksRaycasts = isActive ? true : false;
-        }
-        
-        [Button]
-        public void TogglePlayerInventory()
-        {
-            _isInventoryOpen = !_isInventoryOpen;
-            SetPanelActive(playerGroup, _isInventoryOpen);
-            
-            if(!_isInventoryOpen)
-                SetPanelActive(externalGroup, false);
+            group.interactable = isActive;
+            group.blocksRaycasts = isActive;
         }
 
-        public void OpenExternalInventory(InventoryContainer externalContainer)
+        private void OpenExternalInventory(InventoryContainer externalContainer)
         {
-            _isInventoryOpen = true;
-            SetPanelActive(externalGroup, true);
-            
-            externalInventory.Bind(externalContainer);
+            externalUI.Bind(externalContainer);
+            externalContainer.UpdateInventoryUI();
             
             SetPanelActive(externalGroup, true);
+        }
+
+        private void ForceCloseAll()
+        {
+            SetPanelActive(externalGroup, false);
         }
     }
 }

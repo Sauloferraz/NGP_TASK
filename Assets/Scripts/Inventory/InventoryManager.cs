@@ -38,10 +38,10 @@ namespace Inventory
             // targetContainer.slots[targetIndex] = temp;
             
             // Updates both containers
-            sourceContainer.NotifyUpdated();
+            sourceContainer.UpdateInventoryUI();
             if (sourceContainer != targetContainer)
             {
-                targetContainer.NotifyUpdated();
+                targetContainer.UpdateInventoryUI();
             }
             
             // Saves the changes

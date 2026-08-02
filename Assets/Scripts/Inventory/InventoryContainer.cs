@@ -40,6 +40,8 @@ namespace Inventory
             {
                 InventoryManager.Instance.allActiveContainers.Add(this);
             }
+            
+            UpdateInventoryUI();
         }
 
         // This could also be optimized further to not have any dependencies.
@@ -57,7 +59,6 @@ namespace Inventory
         // The inventory is created empty, but ideally it should be able to have pre-defined items, so a Chest could have its content already established by the GameDesigner in the Inspector
         private void InitializeEmptyInventory()
         {
-            slots.Clear();
             for (int i = 0; i < capacity; i++)
             {
                 slots.Add(new InventorySlotData());
@@ -73,7 +74,7 @@ namespace Inventory
             {
                 emptySlot.itemData = item;
             
-                NotifyUpdated();
+                UpdateInventoryUI();
                 GameEvents.RequestSave();
                 return true;
             }
@@ -88,12 +89,11 @@ namespace Inventory
             
             slots[index].Clear();
             
-            NotifyUpdated();
+            UpdateInventoryUI();
             GameEvents.RequestSave();
         }
         
-        // Used for the Drag'n'Drop
-        public void NotifyUpdated()
+        public void UpdateInventoryUI()
         {
             OnInventoryUpdated?.Invoke();
         }
@@ -102,7 +102,7 @@ namespace Inventory
         public void OverwriteFromSave(List<InventorySlotData> loadedSlots)
         {
             slots = loadedSlots;
-            NotifyUpdated();
+            UpdateInventoryUI();
         }
     }
 }

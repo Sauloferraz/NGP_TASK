@@ -17,7 +17,7 @@ namespace Movement
         
         [SerializeField] private float baseSpeed = 10f;
 
-        private Vector2 _lastMoveDirection;
+        public Vector2 LastMoveDirection { get; private set; } = new Vector2(0, -1);
         
         private void Awake()
         {
@@ -27,7 +27,7 @@ namespace Movement
             _rigidbody2D.gravityScale = 0f;
             _rigidbody2D.freezeRotation = true;
 
-            _lastMoveDirection = new Vector2(0, -1);
+            LastMoveDirection = new Vector2(0, -1);
         }
 
         private void Update()
@@ -46,7 +46,9 @@ namespace Movement
 
             if (_moveInput.magnitude > 0.01f)
             {
-                _lastMoveDirection = _moveInput.normalized;
+                LastMoveDirection = _moveInput.normalized;
+                
+                GameEvents.RequestCloseMenus();
             }
 
             UpdateAnimations();
@@ -61,8 +63,8 @@ namespace Movement
         {
             if (!_animator) return;
             
-            _animator.SetFloat(Horizontal, _lastMoveDirection.x);
-            _animator.SetFloat(Vertical, _lastMoveDirection.y);
+            _animator.SetFloat(Horizontal, LastMoveDirection.x);
+            _animator.SetFloat(Vertical, LastMoveDirection.y);
             
             _animator.SetFloat(Speed, _moveInput.magnitude);
         }

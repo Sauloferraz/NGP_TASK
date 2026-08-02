@@ -55,7 +55,7 @@ namespace Inventory
                 }
                 else
                 {
-                    uiSlots[i].gameObject.SetActive(false);
+                    //uiSlots[i].gameObject.SetActive(false);
                 }
             }
         }
