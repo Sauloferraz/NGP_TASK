@@ -11,15 +11,20 @@ namespace Saving
 {
     public class SaveSystem : MonoBehaviour
     {
+        public static SaveSystem Instance { get; private set; }
+        
         public ItemDatabase database;
         
         private string _savePath;
 
         private void Awake()
         {
+            if (Instance && Instance != this) Destroy(gameObject);
+            else Instance = this;
+            
             _savePath = Application.persistentDataPath + "/global_inventory.json";
         }
-
+        
         private void OnEnable()
         {
             GameEvents.OnSaveRequested += Save;
@@ -29,8 +34,21 @@ namespace Saving
         {
             GameEvents.OnSaveRequested -= Save;
         }
+        
+        public bool HasSaveFile()
+        {
+            return File.Exists(_savePath);
+        }
 
-        [Button("Save All Inventories", ButtonSizes.Large)]
+        [Button("Delete Save", ButtonSizes.Large)]
+        public void DeleteSaveFile()
+        {
+            if (!File.Exists(_savePath)) return;
+            File.Delete(_savePath);
+            Debug.Log("<color=magenta>[NEW GAME]</color> Save file deleted from disk.");
+        }
+        
+        [Button("Save", ButtonSizes.Large)]
         public void Save()
         {
             // Clears any 'null' or destroyed containers (fixes Unity Editor static list bug)
@@ -79,7 +97,7 @@ namespace Saving
             Debug.Log($"<color=green>[SAVE SUCCESS]</color> File written to: {_savePath}");
         }
 
-        [Button("Load All Inventories", ButtonSizes.Large)]
+        [Button("Load", ButtonSizes.Large)]
         public void Load()
         {
             // Clear any null containers

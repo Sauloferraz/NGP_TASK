@@ -12,30 +12,22 @@ namespace Interactables
         public bool CanInteract { get; set; }
         
         [SerializeField] private int capacity = 5;
-        private InventoryContainer _myInventory;
+        private InventoryContainer _chestContainer;
         
-        public bool isOpen;
-
+        private void OnEnable() => GameEvents.OnCloseMenusRequested += CloseChest;
+        
+        private void OnDisable() => GameEvents.OnCloseMenusRequested -= CloseChest;
+        
         private void Awake()
         {
             CanInteract = true;
-            _myInventory = GetComponent<InventoryContainer>();
-        }
-        
-        private void OnEnable()
-        {
-            GameEvents.OnCloseMenusRequested += CloseChest;
-        }
-
-        private void OnDisable()
-        {
-            GameEvents.OnCloseMenusRequested -= CloseChest;
+            _chestContainer = GetComponent<InventoryContainer>();
         }
         
         [Button]
         public void Interact()
         {
-            if (isOpen)
+            if (!CanInteract)
             {
                 CloseChest();
                 GameEvents.RequestCloseMenus();
@@ -48,14 +40,12 @@ namespace Interactables
 
         private void OpenChest()
         {
-            isOpen = true;
             CanInteract = false;
-            GameEvents.RequestOpenExternalContainer(_myInventory);
+            GameEvents.RequestOpenExternalContainer(_chestContainer);
         }
 
         private void CloseChest()
         {
-            isOpen = false;
             CanInteract = true;
         }
     }

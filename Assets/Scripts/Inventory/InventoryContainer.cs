@@ -20,8 +20,6 @@ namespace Inventory
     {
         public string containerID;
         
-        public int capacity = 5;
-        
         public List<InventorySlotData> slots = new List<InventorySlotData>();
         
         public event Action OnInventoryUpdated;
