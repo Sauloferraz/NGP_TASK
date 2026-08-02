@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ROLEWORLD_WIZARD_INTERIOR ASSET_343
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 510531278, guid: dc1f803bff098544a867f4204fcf519f, type: 3}
+  m_Sprite: {fileID: 702195334, guid: dc1f803bff098544a867f4204fcf519f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
