@@ -54,8 +54,9 @@ namespace Inventory
            
            InventorySlot targetSlot = eventData.pointerEnter.GetComponentInParent<InventorySlot>();
            
-           if (targetSlot && _sourceSlot)
+           if ((targetSlot && _sourceSlot))
            {
+               if (targetSlot == _sourceSlot) return;
                InventoryManager.Instance.SwapItems(_sourceSlot.ParentContainer, _sourceSlot.SlotIndex,
                    targetSlot.ParentContainer, targetSlot.SlotIndex);
                return;
@@ -75,10 +76,9 @@ namespace Inventory
             
             transform.SetParent(_originalParent);
             transform.position = _originalPosition;
+            
             _canvasGroup.blocksRaycasts = true;
             _canvasGroup.alpha = 1f;
-
-            _originalParent = null;
         }
     }
 }

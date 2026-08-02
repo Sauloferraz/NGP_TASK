@@ -7,25 +7,42 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasGroup))]
 public class MainMenuController : MonoBehaviour
 {
-        public Button ContinueButton;
+        [SerializeField] private GameObject continueButton;
         
-        private CanvasGroup _canvasGroup;
+        private Button _button;
+        private CanvasGroup _buttonCanvasGroup;
+        private CanvasGroup _menuCanvasGroup;
 
         private void Awake()
         { 
-                _canvasGroup = GetComponent<CanvasGroup>();
+                _menuCanvasGroup = GetComponent<CanvasGroup>();
         }
         
         private IEnumerator Start()
-        {
+        { 
                 yield return new WaitUntil(() => SaveSystem.Instance);
                 
-                _canvasGroup.alpha = 1f;
-                _canvasGroup.interactable = true;
-                _canvasGroup.blocksRaycasts = true;
+                _menuCanvasGroup.alpha = 1f;
+                _menuCanvasGroup.interactable = true;
+                _menuCanvasGroup.blocksRaycasts = true;
 
+                if (continueButton)
+                {
+                        _button = continueButton.GetComponent<Button>();
+                        _buttonCanvasGroup = continueButton.GetComponent<CanvasGroup>();
+                }
+                
                 // Disable the continue button if no save file exists
-                ContinueButton.interactable = SaveSystem.Instance.HasSaveFile();
+                if (SaveSystem.Instance.HasSaveFile())
+                {
+                        _button.interactable = true;
+                        _buttonCanvasGroup.alpha = 1f;
+                }
+                else
+                {
+                        _button.interactable = false;
+                        _buttonCanvasGroup.alpha = 0.5f;
+                }
         }
         
         public void OnClickNewGame()
@@ -44,8 +61,8 @@ public class MainMenuController : MonoBehaviour
         
         private void HideMenu()
         {
-                _canvasGroup.alpha = 0f;
-                _canvasGroup.interactable = false;
-                _canvasGroup.blocksRaycasts = false;
+                _menuCanvasGroup.alpha = 0f;
+                _menuCanvasGroup.interactable = false;
+                _menuCanvasGroup.blocksRaycasts = false;
         }
 }

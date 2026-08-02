@@ -2,7 +2,7 @@
 {
     public interface IInteractable
     {
-        public bool CanInteract { get; set; }
+        bool CanInteract { get; set; }
         
         void Interact();
     }

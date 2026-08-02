@@ -795,16 +795,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_TravelBook_SpritesheetInfo01a_20
+      name: Selection_Frame_Unselected
       rect:
         serializedVersion: 2
-        x: 64
-        y: 432
-        width: 64
-        height: 16
+        x: 65
+        y: 433
+        width: 62
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       customData: 
       outline: []
       physicsShape: []
@@ -817,16 +817,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_TravelBook_SpritesheetInfo01a_21
+      name: SelectionFrame_Selected
       rect:
         serializedVersion: 2
-        x: 64
-        y: 416
-        width: 64
-        height: 16
+        x: 65
+        y: 417
+        width: 62
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       customData: 
       outline: []
       physicsShape: []
@@ -886,13 +886,13 @@ TextureImporter:
       name: Button
       rect:
         serializedVersion: 2
-        x: 64
-        y: 352
-        width: 32
-        height: 32
+        x: 65
+        y: 353
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 3, z: 1, w: 2}
       customData: 
       outline: []
       physicsShape: []
@@ -2313,6 +2313,8 @@ TextureImporter:
       MouseClick: 1478703257261631200
       RightPage: 1242935191180913064
       SelectedSlot: 15875216693588287
+      SelectionFrame_Selected: -8454537026326685352
+      Selection_Frame_Unselected: -7294805430927603221
       Settings: -913131637891256770
       SlotFrame: -4460249996796919725
       TextField: -7779590728655002766
@@ -2324,8 +2326,6 @@ TextureImporter:
       UI_TravelBook_SpritesheetInfo01a_16: 3893287287263263213
       UI_TravelBook_SpritesheetInfo01a_17: 3837844380258999439
       UI_TravelBook_SpritesheetInfo01a_19: 1054461266526671681
-      UI_TravelBook_SpritesheetInfo01a_20: -7294805430927603221
-      UI_TravelBook_SpritesheetInfo01a_21: -8454537026326685352
       UI_TravelBook_SpritesheetInfo01a_22: 5852705510791975812
       UI_TravelBook_SpritesheetInfo01a_25: -3118611643948080267
       UI_TravelBook_SpritesheetInfo01a_28: -7794949169955941610

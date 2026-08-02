@@ -7,7 +7,6 @@ namespace Interactables
     public class Cauldron : MonoBehaviour, IInteractable
     {
         public bool CanInteract { get; set; }
-
         private InventoryContainer _cauldronContainer;
 
         private void Awake()
@@ -16,6 +15,7 @@ namespace Interactables
             _cauldronContainer = GetComponent<InventoryContainer>();
         }
 
+        
         public void Interact()
         {
             if (!CanInteract)

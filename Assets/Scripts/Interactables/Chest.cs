@@ -11,7 +11,6 @@ namespace Interactables
     {
         public bool CanInteract { get; set; }
         
-        [SerializeField] private int capacity = 5;
         private InventoryContainer _chestContainer;
         
         private void OnEnable() => GameEvents.OnCloseMenusRequested += CloseChest;

@@ -14,6 +14,7 @@ namespace UI
         private void Awake()
         {
             SetPanelActive(externalGroup, false);
+            
         }
 
         private void OnEnable()
