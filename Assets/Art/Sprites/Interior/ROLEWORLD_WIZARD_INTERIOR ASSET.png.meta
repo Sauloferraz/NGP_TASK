@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 12ec27dd58f61d748b46aef5030160ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3725100760206846362
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_0
+  - first:
+      213: -7838413070793003179
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_1
+  - first:
+      213: 4292543183671886659
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_2
+  - first:
+      213: -6253433053483619742
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_3
+  - first:
+      213: -4118275063698941764
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_4
+  - first:
+      213: -6839125090801341489
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_5
+  - first:
+      213: -4303143216813289659
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_6
+  - first:
+      213: -3262596844146757029
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_7
+  - first:
+      213: 1155060062539386039
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_8
+  - first:
+      213: -8385167915071736370
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_9
+  - first:
+      213: -2105981712144108430
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_10
+  - first:
+      213: 1980339978802012631
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_11
+  - first:
+      213: 7240036782227616884
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_12
+  - first:
+      213: -2672213443520727790
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_13
+  - first:
+      213: -6501524009796067877
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_14
+  - first:
+      213: -8655730249624530132
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_15
+  - first:
+      213: 1068773886330454216
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_16
+  - first:
+      213: -6435947567881621756
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_17
+  - first:
+      213: -4139246585321459543
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_18
+  - first:
+      213: -9062831278776317120
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_19
+  - first:
+      213: 4538266721423629520
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_20
+  - first:
+      213: -3414047220837440291
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_21
+  - first:
+      213: 4549162318045664432
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_22
+  - first:
+      213: -5181901623258851349
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_23
+  - first:
+      213: -4128083104581701237
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_24
+  - first:
+      213: -5258333649712366703
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_25
+  - first:
+      213: -3868256108089310485
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_26
+  - first:
+      213: 1352434986966874605
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_27
+  - first:
+      213: -110651025481062476
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_28
+  - first:
+      213: -5016043187480062981
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_29
+  - first:
+      213: -2115244284362362646
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_30
+  - first:
+      213: -6391379551416198520
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_31
+  - first:
+      213: -8471442798146563685
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_32
+  - first:
+      213: 8075355727117050269
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_33
+  - first:
+      213: 1989382586695503538
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_34
+  - first:
+      213: -1033461942002458777
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_35
+  - first:
+      213: 6858597352665906
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_36
+  - first:
+      213: -4792590373360060362
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_37
+  - first:
+      213: -8064034731341389793
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_38
+  - first:
+      213: 6571259095078956083
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_39
+  - first:
+      213: -6940117100929089921
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_40
+  - first:
+      213: 6226286684005968197
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_41
+  - first:
+      213: -7406076143998568906
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_42
+  - first:
+      213: -3452908601699829750
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_43
+  - first:
+      213: -8688940683436023586
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_44
+  - first:
+      213: 594006289345087653
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_45
+  - first:
+      213: -2646886146523640917
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_46
+  - first:
+      213: -3657010850125313945
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_47
+  - first:
+      213: 969294287235250703
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_48
+  - first:
+      213: -4798987824501119028
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_49
+  - first:
+      213: 5159731149419870179
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_50
+  - first:
+      213: -6800940254576009091
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_51
+  - first:
+      213: -948724319374272059
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_52
+  - first:
+      213: -7728234131780000171
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_53
+  - first:
+      213: 2493083708049749033
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_54
+  - first:
+      213: -7760943515498922754
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_55
+  - first:
+      213: -4681459200426453086
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_56
+  - first:
+      213: 1759007638865734777
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_57
+  - first:
+      213: 1288626699464637652
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_58
+  - first:
+      213: 3616127590284844343
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_59
+  - first:
+      213: -6880764322495099950
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_60
+  - first:
+      213: 5267667391484806930
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_61
+  - first:
+      213: -2498984360290505443
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_62
+  - first:
+      213: 2864101794414935764
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_63
+  - first:
+      213: -7195078399298803030
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_64
+  - first:
+      213: -3138761754927021684
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_65
+  - first:
+      213: 7173055884410829658
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_66
+  - first:
+      213: -6724301441107484594
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_67
+  - first:
+      213: 6934921273216425156
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_68
+  - first:
+      213: 9197950830114675854
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_69
+  - first:
+      213: 2564720101217416282
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_70
+  - first:
+      213: -7825368511018435628
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_71
+  - first:
+      213: 7768742563361727292
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_72
+  - first:
+      213: 5254827108403377122
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_73
+  - first:
+      213: -7453053995311187343
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_74
+  - first:
+      213: -2363936424189565867
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_75
+  - first:
+      213: -2728213699045823423
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_76
+  - first:
+      213: -3031401462188012808
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_77
+  - first:
+      213: 259166093031537161
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_78
+  - first:
+      213: -7294552134777382367
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_79
+  - first:
+      213: -2067895339304885078
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_80
+  - first:
+      213: -6675197436600899873
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_81
+  - first:
+      213: -7392245180622165639
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_82
+  - first:
+      213: 400803908370507266
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_83
+  - first:
+      213: -1014860049545235507
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_84
+  - first:
+      213: 7357793649508488702
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_85
+  - first:
+      213: 2135772426787005320
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_86
+  - first:
+      213: 4060539755938528549
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_87
+  - first:
+      213: -3663441525828631145
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_88
+  - first:
+      213: 7442265966448936312
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_89
+  - first:
+      213: 2143396227431134645
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_90
+  - first:
+      213: 5561460674910900617
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_91
+  - first:
+      213: 5679134617971963198
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_92
+  - first:
+      213: -6941043359117823998
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_93
+  - first:
+      213: 959104860941485466
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_94
+  - first:
+      213: -5910772028554058302
+    second: ROLEWORLD_WIZARD_INTERIOR ASSET_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WizardClothes
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66655535898cd4cc0800000000000000
+      internalID: -3725100760206846362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_INTERIOR ASSET_34
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 369
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be45522ce4bb9b10800000000000000
+      internalID: 1989382586695503538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_INTERIOR ASSET_35
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 369
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fde0ad6d768a1f0800000000000000
+      internalID: -1033461942002458777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_INTERIOR ASSET_36
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 369
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233fcd2abdd581000800000000000000
+      internalID: 6858597352665906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_INTERIOR ASSET_37
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 369
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638bae9927c4d7db0800000000000000
+      internalID: -4792590373360060362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROLEWORLD_WIZARD_INTERIOR ASSET_58
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 199
+        width: 23
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc7cadd72f12e110800000000000000
+      internalID: 1288626699464637652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MysticThingy
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 63
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9792c6c8c28796990800000000000000
+      internalID: -7392245180622165639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 63
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2062307f701ff8500800000000000000
+      internalID: 400803908370507266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottles
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 38
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c81259f5b537b4580e0e18d65faee1
+      internalID: 849385054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chemical
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 47
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1de0a2a6272e324e93dd42b7797cef6
+      internalID: -804372962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glasses
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 35
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfa67d3365c8b14c911b9edf392f8bc
+      internalID: 982661490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 64
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ea302aacfef6049ac479d22cf96237
+      internalID: -846925558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bba0fc8054d2fd84d929e8dd5c8794ed
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bottles: 849385054
+      Chemical: -804372962
+      Glasses: 982661490
+      MysticThingy: -7392245180622165639
+      Plant: 400803908370507266
+      ROLEWORLD_WIZARD_INTERIOR ASSET_1: -7838413070793003179
+      ROLEWORLD_WIZARD_INTERIOR ASSET_10: -2105981712144108430
+      ROLEWORLD_WIZARD_INTERIOR ASSET_11: 1980339978802012631
+      ROLEWORLD_WIZARD_INTERIOR ASSET_12: 7240036782227616884
+      ROLEWORLD_WIZARD_INTERIOR ASSET_13: -2672213443520727790
+      ROLEWORLD_WIZARD_INTERIOR ASSET_14: -6501524009796067877
+      ROLEWORLD_WIZARD_INTERIOR ASSET_15: -8655730249624530132
+      ROLEWORLD_WIZARD_INTERIOR ASSET_16: 1068773886330454216
+      ROLEWORLD_WIZARD_INTERIOR ASSET_17: -6435947567881621756
+      ROLEWORLD_WIZARD_INTERIOR ASSET_18: -4139246585321459543
+      ROLEWORLD_WIZARD_INTERIOR ASSET_19: -9062831278776317120
+      ROLEWORLD_WIZARD_INTERIOR ASSET_2: 4292543183671886659
+      ROLEWORLD_WIZARD_INTERIOR ASSET_20: 4538266721423629520
+      ROLEWORLD_WIZARD_INTERIOR ASSET_21: -3414047220837440291
+      ROLEWORLD_WIZARD_INTERIOR ASSET_22: 4549162318045664432
+      ROLEWORLD_WIZARD_INTERIOR ASSET_23: -5181901623258851349
+      ROLEWORLD_WIZARD_INTERIOR ASSET_24: -4128083104581701237
+      ROLEWORLD_WIZARD_INTERIOR ASSET_25: -5258333649712366703
+      ROLEWORLD_WIZARD_INTERIOR ASSET_26: -3868256108089310485
+      ROLEWORLD_WIZARD_INTERIOR ASSET_27: 1352434986966874605
+      ROLEWORLD_WIZARD_INTERIOR ASSET_28: -110651025481062476
+      ROLEWORLD_WIZARD_INTERIOR ASSET_29: -5016043187480062981
+      ROLEWORLD_WIZARD_INTERIOR ASSET_3: -6253433053483619742
+      ROLEWORLD_WIZARD_INTERIOR ASSET_30: -2115244284362362646
+      ROLEWORLD_WIZARD_INTERIOR ASSET_31: -6391379551416198520
+      ROLEWORLD_WIZARD_INTERIOR ASSET_32: -8471442798146563685
+      ROLEWORLD_WIZARD_INTERIOR ASSET_33: 8075355727117050269
+      ROLEWORLD_WIZARD_INTERIOR ASSET_34: 1989382586695503538
+      ROLEWORLD_WIZARD_INTERIOR ASSET_35: -1033461942002458777
+      ROLEWORLD_WIZARD_INTERIOR ASSET_36: 6858597352665906
+      ROLEWORLD_WIZARD_INTERIOR ASSET_37: -4792590373360060362
+      ROLEWORLD_WIZARD_INTERIOR ASSET_38: -8064034731341389793
+      ROLEWORLD_WIZARD_INTERIOR ASSET_39: 6571259095078956083
+      ROLEWORLD_WIZARD_INTERIOR ASSET_4: -4118275063698941764
+      ROLEWORLD_WIZARD_INTERIOR ASSET_40: -6940117100929089921
+      ROLEWORLD_WIZARD_INTERIOR ASSET_41: 6226286684005968197
+      ROLEWORLD_WIZARD_INTERIOR ASSET_42: -7406076143998568906
+      ROLEWORLD_WIZARD_INTERIOR ASSET_43: -3452908601699829750
+      ROLEWORLD_WIZARD_INTERIOR ASSET_44: -8688940683436023586
+      ROLEWORLD_WIZARD_INTERIOR ASSET_45: 594006289345087653
+      ROLEWORLD_WIZARD_INTERIOR ASSET_46: -2646886146523640917
+      ROLEWORLD_WIZARD_INTERIOR ASSET_47: -3657010850125313945
+      ROLEWORLD_WIZARD_INTERIOR ASSET_48: 969294287235250703
+      ROLEWORLD_WIZARD_INTERIOR ASSET_49: -4798987824501119028
+      ROLEWORLD_WIZARD_INTERIOR ASSET_5: -6839125090801341489
+      ROLEWORLD_WIZARD_INTERIOR ASSET_50: 5159731149419870179
+      ROLEWORLD_WIZARD_INTERIOR ASSET_51: -6800940254576009091
+      ROLEWORLD_WIZARD_INTERIOR ASSET_52: -948724319374272059
+      ROLEWORLD_WIZARD_INTERIOR ASSET_53: -7728234131780000171
+      ROLEWORLD_WIZARD_INTERIOR ASSET_54: 2493083708049749033
+      ROLEWORLD_WIZARD_INTERIOR ASSET_55: -7760943515498922754
+      ROLEWORLD_WIZARD_INTERIOR ASSET_56: -4681459200426453086
+      ROLEWORLD_WIZARD_INTERIOR ASSET_57: 1759007638865734777
+      ROLEWORLD_WIZARD_INTERIOR ASSET_58: 1288626699464637652
+      ROLEWORLD_WIZARD_INTERIOR ASSET_59: 3616127590284844343
+      ROLEWORLD_WIZARD_INTERIOR ASSET_6: -4303143216813289659
+      ROLEWORLD_WIZARD_INTERIOR ASSET_60: -6880764322495099950
+      ROLEWORLD_WIZARD_INTERIOR ASSET_61: 5267667391484806930
+      ROLEWORLD_WIZARD_INTERIOR ASSET_62: -2498984360290505443
+      ROLEWORLD_WIZARD_INTERIOR ASSET_63: 2864101794414935764
+      ROLEWORLD_WIZARD_INTERIOR ASSET_64: -7195078399298803030
+      ROLEWORLD_WIZARD_INTERIOR ASSET_65: -3138761754927021684
+      ROLEWORLD_WIZARD_INTERIOR ASSET_66: 7173055884410829658
+      ROLEWORLD_WIZARD_INTERIOR ASSET_67: -6724301441107484594
+      ROLEWORLD_WIZARD_INTERIOR ASSET_68: 6934921273216425156
+      ROLEWORLD_WIZARD_INTERIOR ASSET_69: 9197950830114675854
+      ROLEWORLD_WIZARD_INTERIOR ASSET_7: -3262596844146757029
+      ROLEWORLD_WIZARD_INTERIOR ASSET_70: 2564720101217416282
+      ROLEWORLD_WIZARD_INTERIOR ASSET_71: -7825368511018435628
+      ROLEWORLD_WIZARD_INTERIOR ASSET_72: 7768742563361727292
+      ROLEWORLD_WIZARD_INTERIOR ASSET_73: 5254827108403377122
+      ROLEWORLD_WIZARD_INTERIOR ASSET_74: -7453053995311187343
+      ROLEWORLD_WIZARD_INTERIOR ASSET_75: -2363936424189565867
+      ROLEWORLD_WIZARD_INTERIOR ASSET_76: -2728213699045823423
+      ROLEWORLD_WIZARD_INTERIOR ASSET_77: -3031401462188012808
+      ROLEWORLD_WIZARD_INTERIOR ASSET_78: 259166093031537161
+      ROLEWORLD_WIZARD_INTERIOR ASSET_79: -7294552134777382367
+      ROLEWORLD_WIZARD_INTERIOR ASSET_8: 1155060062539386039
+      ROLEWORLD_WIZARD_INTERIOR ASSET_80: -2067895339304885078
+      ROLEWORLD_WIZARD_INTERIOR ASSET_81: -6675197436600899873
+      ROLEWORLD_WIZARD_INTERIOR ASSET_84: -1014860049545235507
+      ROLEWORLD_WIZARD_INTERIOR ASSET_85: 7357793649508488702
+      ROLEWORLD_WIZARD_INTERIOR ASSET_86: 2135772426787005320
+      ROLEWORLD_WIZARD_INTERIOR ASSET_87: 4060539755938528549
+      ROLEWORLD_WIZARD_INTERIOR ASSET_88: -3663441525828631145
+      ROLEWORLD_WIZARD_INTERIOR ASSET_89: 7442265966448936312
+      ROLEWORLD_WIZARD_INTERIOR ASSET_9: -8385167915071736370
+      ROLEWORLD_WIZARD_INTERIOR ASSET_90: 2143396227431134645
+      ROLEWORLD_WIZARD_INTERIOR ASSET_91: 5561460674910900617
+      ROLEWORLD_WIZARD_INTERIOR ASSET_92: 5679134617971963198
+      ROLEWORLD_WIZARD_INTERIOR ASSET_93: -6941043359117823998
+      ROLEWORLD_WIZARD_INTERIOR ASSET_94: 959104860941485466
+      ROLEWORLD_WIZARD_INTERIOR ASSET_95: -5910772028554058302
+      Water: -846925558
+      WizardClothes: -3725100760206846362
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
