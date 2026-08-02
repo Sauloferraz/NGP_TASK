@@ -28,7 +28,7 @@ namespace Inventory
         
         private void Awake()
         {
-            InitializeEmptyInventory();
+            //InitializeEmptyInventory();
         }
 
         // This could be optimized further through script execution order, and/or preferably no dependencies to InventoryManager

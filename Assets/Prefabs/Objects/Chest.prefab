@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6945065, guid: acd2fce5442425748b5b8bdbd6ed8412, type: 3}
+  m_Sprite: {fileID: 1721421329, guid: c2f8a2825d450b240b50bb8380e3fd2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bacef61a1347b08c961ea99c7be89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory.InventoryContainer
-  containerID: Chest
+  containerID: Chest1
   capacity: 14
   slots:
   - itemData: {fileID: 0}
