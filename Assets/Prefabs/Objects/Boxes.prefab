@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5448806356147777435}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5866025679970859117}
   - component: {fileID: 9137239406173754442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3317658534584450616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7675513179301143572}
   - component: {fileID: 5363541208317659020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3510893281766761167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3040010837591180266}
   - component: {fileID: 1103527879940420156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,9 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3480536585293810222}
   - component: {fileID: 6212465768237286628}
-  - component: {fileID: 2726291178174342351}
-  - component: {fileID: 2585254561946038831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7888679525960534723}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.94, y: -3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -452,46 +450,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.7188168}
   m_EdgeRadius: 0
---- !u!114 &2726291178174342351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7888679525960534723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23bacef61a1347b08c961ea99c7be89c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory.InventoryContainer
-  containerID: Boxes
-  capacity: 14
-  slots:
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
-  - itemData: {fileID: 0}
---- !u!114 &2585254561946038831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7888679525960534723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94291ccf26c14356afdf5faaac681329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactables.Chest
-  capacity: 14
-  isOpen: 0
