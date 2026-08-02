@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df3ccd678fb18154d99f404f97a74f97, type: 3}
-  m_Name: Shovel
+  m_Name: Crystal
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: 2
-  itemName: Shovel
-  sprite: {fileID: 21300000, guid: 66ae8f335d145934e9bd9e5ef97a7ed7, type: 3}
+  itemName: Wing
+  sprite: {fileID: -995310176, guid: 3b393cf12bf2bb245a2f7476630345c4, type: 3}
+  description: 
   stackable: 0
   maxStacks: 1
